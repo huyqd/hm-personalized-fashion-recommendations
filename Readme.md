@@ -1,0 +1,1 @@
+dvc remote add -d myremote gdrive://16PgVcSVNqydnBaABOfnv-xFg77ZwV16l/dvcstore 
