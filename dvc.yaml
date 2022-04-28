@@ -1,0 +1,13 @@
+stages:
+  prepare_data:
+    cmd: python dataset.py
+    deps:
+    - data/articles.csv
+    - data/articles_mapping.json
+    - data/customers.csv
+    - data/customers_mapping.json
+    - data/transactions_train.csv
+    outs:
+    - data/interaction_matrix/data.npz
+  prepare_dataset:
+    cmd: which python

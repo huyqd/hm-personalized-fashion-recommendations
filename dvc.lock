@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  prepare_dataset:
+    cmd: which python
+  prepare_data:
+    cmd: python dataset.py
+    deps:
+    - path: data/articles.csv
+      md5: f193ef0f582e8476ebb613d143742d0f
+      size: 36127865
+    - path: data/articles_mapping.json
+      md5: 3a6605ef446536c596ff231077eabe42
+      size: 2210814
+    - path: data/customers.csv
+      md5: 3aa1713831590115fffc667ba6c187a7
+      size: 207135859
+    - path: data/customers_mapping.json
+      md5: 163d1642679ca3131fec9728c1542f58
+      size: 104531350
+    - path: data/transactions_train.csv
+      md5: 1c2324373fd36542f4e6a99eedd1a240
+      size: 3488002253
+    outs:
+    - path: data/interaction_matrix/data.npz
+      md5: f78839a06df0df8ee8ca3c32a359653b
+      size: 3276653
