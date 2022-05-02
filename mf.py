@@ -1,3 +1,5 @@
+import json
+
 import implicit
 import numpy as np
 from implicit.nearest_neighbours import bm25_weight
@@ -28,3 +30,5 @@ if __name__ == '__main__':
     val_items, val_scores = model.recommend(val_users, train_csr[val_users], N=Config.N_RECOMMENDATIONS)
     metrics = get_metrics(csr=val_csr, predictions=val_items)
 
+    with open("metrics.json", "w") as fd:
+        json.dump(metrics, fd, indent=4)

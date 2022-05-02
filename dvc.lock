@@ -24,3 +24,13 @@ stages:
     - path: data/interaction_matrix/data.npz
       md5: f78839a06df0df8ee8ca3c32a359653b
       size: 3276653
+  mf:
+    cmd: python mf.py
+    deps:
+    - path: data/interaction_matrix/data.npz
+      md5: f78839a06df0df8ee8ca3c32a359653b
+      size: 3276653
+    outs:
+    - path: metrics.json
+      md5: ec00646568a370c006a1305b34497953
+      size: 67

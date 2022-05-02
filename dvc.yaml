@@ -9,3 +9,10 @@ stages:
     - data/transactions_train.csv
     outs:
     - data/interaction_matrix/data.npz
+  mf:
+    cmd: python mf.py
+    deps:
+    - data/interaction_matrix/data.npz
+    metrics:
+    - metrics.json:
+        cache: false
