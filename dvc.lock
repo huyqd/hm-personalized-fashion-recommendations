@@ -31,6 +31,6 @@ stages:
       md5: f78839a06df0df8ee8ca3c32a359653b
       size: 3276653
     outs:
-    - path: metrics.json
-      md5: ec00646568a370c006a1305b34497953
-      size: 67
+    - path: metrics/mf.json
+      md5: 5c1576aaddca3a2fa9fc6745eae470bb
+      size: 65
