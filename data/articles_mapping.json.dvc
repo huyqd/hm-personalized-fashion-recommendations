@@ -1,0 +1,4 @@
+outs:
+- md5: 3a6605ef446536c596ff231077eabe42
+  size: 2210814
+  path: articles_mapping.json

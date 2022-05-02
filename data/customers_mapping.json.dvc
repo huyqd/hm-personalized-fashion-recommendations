@@ -1,0 +1,4 @@
+outs:
+- md5: 163d1642679ca3131fec9728c1542f58
+  size: 104531350
+  path: customers_mapping.json

@@ -9,5 +9,3 @@ stages:
     - data/transactions_train.csv
     outs:
     - data/interaction_matrix/data.npz
-  prepare_dataset:
-    cmd: which python
