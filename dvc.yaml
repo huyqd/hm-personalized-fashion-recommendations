@@ -13,6 +13,9 @@ stages:
     cmd: python mf.py
     deps:
     - data/interaction_matrix/data.npz
+    params:
+    - mf.embedding_dim
+    - mf.regularization
     metrics:
     - metrics/mf.json:
         cache: false

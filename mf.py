@@ -3,6 +3,7 @@ import os
 
 import implicit
 import numpy as np
+import yaml
 from implicit.nearest_neighbours import bm25_weight
 
 from metrics import get_metrics
@@ -10,6 +11,7 @@ from utils import IOPath
 from config import Config
 
 if __name__ == '__main__':
+    params = yaml.safe_load(open("params.yaml"))["mf"]
     res = np.load(IOPath.INTERACTION_MATRIX / "data.npz", allow_pickle=True)
     train_csr, val_csr = res['train_csr'].item(), res['val_csr'].item()
 
@@ -17,8 +19,9 @@ if __name__ == '__main__':
     train_csr = bm25_weight(train_csr, **normalization_params).tocsr()
 
     # 2. Train model.
-    embedding_dim = 40
-    regularization = 0.1
+    embedding_dim = params["embedding_dim"]
+    regularization = params["regularization"]
+
     model = implicit.als.AlternatingLeastSquares(
         factors=embedding_dim,
         use_gpu=False,

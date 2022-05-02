@@ -1,0 +1,3 @@
+mf:
+  embedding_dim: 40
+  regularization: 0.1
