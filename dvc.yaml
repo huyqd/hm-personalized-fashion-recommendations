@@ -18,4 +18,4 @@ stages:
     - mf.regularization
     metrics:
     - metrics/mf.json:
-        cache: false
+        cache: true
