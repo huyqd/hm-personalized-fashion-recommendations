@@ -32,9 +32,9 @@ stages:
       size: 3276653
     params:
       params.yaml:
-        mf.embedding_dim: 50
+        mf.embedding_dim: 60
         mf.regularization: 0.1
     outs:
     - path: metrics/mf.json
-      md5: a158a38ab44ea9ee95044781592b181e
-      size: 66
+      md5: 6804dce40e3468a902976dc40e8edd79
+      size: 67
